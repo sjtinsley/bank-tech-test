@@ -9,14 +9,15 @@
 * Here, you can deposit or withdraw money to this account, and print the statement.
 
 Example:
-    bundle install
-    irb
-    require('./lib/account.rb')
-    a = Account.new # this create a new account instance
-    a.deposit(500) # this will deposit £500 to this account
-    a.withdraw(100) # this will withdraw £100 from this account
-    print(a.statement.display) # this will print the transaction history for this account to the console
-
+```
+bundle install
+irb
+require('./lib/account.rb')
+a = Account.new # this create a new account instance
+a.deposit(500) # this will deposit £500 to this account
+a.withdraw(100) # this will withdraw £100 from this account
+print(a.statement.display) # this will print the transaction history for this account to the console
+```
 
 ## How To Run The Tests
 * You can run the test suite on rspec
