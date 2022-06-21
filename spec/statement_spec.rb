@@ -12,13 +12,13 @@ describe Statement do
   describe '#display' do
     it 'correctly prints an empty statement when there are no transactions' do
       empty_statement = 'date || credit || debit || balance'
-      expect(statement.display).to eq(empty_statement)
+      expect(statement.display).to eq empty_statement
     end
 
     it 'correctly prints a statement with a deposit and withdrawal' do
       statement.transactions.push(mock_deposit, mock_withdrawal)
       expected_statement = "date || credit || debit || balance\n01/09/2023 || 1700.00 ||  || 1700.00\n01/10/2023 ||  || 500.00 || 1200.00"
-      expect(statement.display).to eq(expected_statement)
+      expect(statement.display).to eq expected_statement
     end
   end
 
