@@ -16,14 +16,14 @@ describe Statement do
     end
 
     it 'correctly prints a statement with a deposit and withdrawal' do
-      statement.transactions.push(mock_deposit, mock_withdrawal)
+      statement.transactions.push(mock_withdrawal, mock_deposit)
       expected_statement = "date || credit || debit || balance\n01/09/2023 || 1700.00 ||  || 1700.00\n01/10/2023 ||  || 500.00 || 1200.00"
       expect(statement.display).to eq expected_statement
     end
   end
 
   describe '#add' do
-    it 'adds a transaction to the statement' do
+    it 'adds transactions to the statement' do
       statement.add(mock_deposit)
       expect(statement.transactions).to eq [mock_deposit]
     end
