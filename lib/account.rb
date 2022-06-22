@@ -14,13 +14,13 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    @statement.add(@transaction_class.new(debit: nil, credit: amount, new_balance: @balance))
+    @statement.add(@transaction_class.new(debit: nil, credit: amount))
     p("You have successfully deposited #{amount}, your balance is now #{@balance}")
   end
 
   def withdraw(amount)
     @balance -= amount
-    @statement.add(@transaction_class.new(debit: amount, credit: nil, new_balance: @balance))
+    @statement.add(@transaction_class.new(debit: amount, credit: nil))
     p("You have successfully withdrawn #{amount}, your balance is now #{@balance}")
   end
 end
